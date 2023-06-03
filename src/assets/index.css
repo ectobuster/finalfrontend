@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-white {
+  color: white;
+}
+
+
+.contenedor-flex {
+  display: flex;
+  flex-direction: row; /* o column */
+  justify-content: space-around; /* o flex-start, flex-end, space-between, space-around, space-evenly */
+  align-items: center; /* o flex-start, flex-end, stretch, baseline */
+  flex-wrap: wrap; /* opcional: para permitir el ajuste de elementos en múltiples líneas */
+}

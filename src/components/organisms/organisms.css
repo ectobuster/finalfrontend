@@ -1,0 +1,117 @@
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: rota, Arial, Helvetica, sans-serif;
+  word-wrap: normal
+}
+
+@font-face {
+  font-family: rota;
+  src: url('src/assets/rota/Rota Complete Family/Rota-Regular.otf');
+}
+
+.width{
+  width: 500px;
+}
+
+.Tcenter{
+  text-align: center
+}
+
+.text-white {
+  color: white;
+}
+
+.fondoceleste{
+  background-color:#ECF0F3
+}
+
+.fondoblanco{
+  background-color:#ffffff
+}
+
+.H1titulo{
+  font-family: Rota, Arial, Helvetica, sans-serif;
+  font-style: bold;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 140%;
+}
+
+.H2{
+  font-family: Rota, Arial, Helvetica, sans-serif;
+  font-style: bold;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 140%;
+}
+.H3{
+  font-family: Rota, Arial, Helvetica, sans-serif;
+  font-style: light;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.bf{
+  font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 200%;
+}
+
+.Bgimage{
+  background-image: url('https://s3-alpha-sig.figma.com/img/7ba6/ef18/6a412b3f8d640cc65382607b17dfe53a?Expires=1685923200&Signature=dJV8QaCrtlIwTyVOPZjHOhUOyoYHD3zzIbPm9gydimk7LysDy6X9as6suJar2Ut-lOz5IJFq~MuMfR~llpvZfr8mdTt2hTlQA7qZ3BexbhG~0Gm4PCqwrDGCC2BAonWMNZ7bnupsG853niIOPRjYIggfkLMlKFbuli2BrY-7Ox-n~LdFbDDRqXwGtpSdo~tdYCXWj8cEQ6usv5JmSqNsceiIV6JEZjJ4kd1vYVuyesO8LqAydX3dUAc41DnGIU-U7m1FVF2kPtldnJ7D5pcc7zfHEciOuUnH4msAAEnJj5HQGEFJqO~neQIJy1OiMyt3smbWNUtCNHTPNgYsJz~tlw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  background-size: cover
+}
+
+.prex{
+  background-image: url(  'https://s3-alpha-sig.figma.com/img/1203/622a/38b382ea3391bd34a1800e65682d0dcb?Expires=1686528000&Signature=h0zOdTRaBfOHjQkP~UwKpxYeRmHykUxznceceh6r6VgLYLoeXw-OZM-7vx0pjET7rnTXUx4oekSRpL0vMNv4NupDrxPmBX2Mmf8ui8Lmll~O0fii6Fqimh4OcWzxFumhSc0eotZ-xQpnnM0eias8JuAtU0EU37HYodmpBfsL9llw8WmoxWP0gFI~1JWGiutAw7CFRAfgeMDCY8~i0SiN45n6q4Hn40TIIbZw-0N5kPKrKoqqlt-urxXApdz-aKCX3eLOgvYiFtJrssWZ9nuPw3cZEHcraiy4K8lu9OsB9cyx23o831TWgHUkAbtU9cEN~ZMlHdRFvxlTME5wSg~PSA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+  background-size: cover
+}
+
+.BS{
+  height: 900px;
+}
+
+.Seccion{
+  height: 650px;
+}
+.Seccionf{
+  height: 200px;
+}
+.Seccions{
+  height: 30px;
+}
+
+.contenedor-flex {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around; 
+  align-items: center; 
+}
+
+.contenedor-flex2 {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-evenly; 
+  align-items: center; 
+}
+
+.contenedor-flexV {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-around; 
+  align-items: center; 
+}
+
+.contenedor-flexV2 {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: left; 
+}
