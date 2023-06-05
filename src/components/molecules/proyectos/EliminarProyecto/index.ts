@@ -1,1 +1,1 @@
-export { default } from './EliminarUsuario'
+export { default } from './EliminarProyecto'

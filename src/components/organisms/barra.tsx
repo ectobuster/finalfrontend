@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,16 +12,16 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import './organisms.css'
 
-import styles from './ResponsiveAppBar.module.css';
 
-const pages = ['usuarios', '1', '2', '3', '4', '5'];
+const pages = ['Inicio', 'Proyectos', 'Acerca de mi'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
-  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
+  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -39,26 +39,26 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar className="text-white" position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <AppBar position="static" sx={{ backgroundColor: 'white' }}>
+      <div >
+        <div className="contenedor-flex2 ">
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
-            component={Link}
-            to="/"
+            component="a"
+            href="/"
             sx={{
-              mr: 2,
+              mr: 0,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
-            LOGO
+            RVillalta
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -72,7 +72,6 @@ function ResponsiveAppBar() {
             >
               <MenuIcon />
             </IconButton>
-            
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -93,11 +92,12 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem 
-                  component={Link}
-                  to="/usuario"   
-                  key={page}
-                  >
-                  <Typography  textAlign="center">{page}</Typography>
+                component={Link}
+                to="/usuario"
+                key={page} 
+                onClick={handleCloseNavMenu}
+                >
+                  <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -106,8 +106,8 @@ function ResponsiveAppBar() {
           <Typography
             variant="h5"
             noWrap
-            component={Link}
-            to="/"
+            component="a"
+            href=""
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
@@ -115,33 +115,30 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1,justifyContent: 'center', display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 component={Link}
                 to={page.toLowerCase()}
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'black', display: 'block' }}
               >
                 {page}
               </Button>
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
-              <IconButton 
-                onClick={handleOpenUserMenu}
-                sx={{ p: 0 }}
-              >
-              <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" /> 
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                <Avatar alt="Remy Sharp"  />
               </IconButton>
             </Tooltip>
             <Menu
@@ -166,9 +163,9 @@ function ResponsiveAppBar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
-        </Toolbar>
-      </Container>
+          </Box> */}
+        </div>
+      </div>
     </AppBar>
   );
 }

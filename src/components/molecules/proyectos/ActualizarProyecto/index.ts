@@ -1,1 +1,1 @@
-export { default } from './ActualizarUsuario'
+export { default } from './ActualizarProyecto'
