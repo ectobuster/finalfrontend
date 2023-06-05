@@ -125,7 +125,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 component={Link}
-                to={page.toLowerCase()}
+                to={`/CMS/${page.toLowerCase()}`}
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}

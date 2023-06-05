@@ -1,17 +1,17 @@
 import Container from '@mui/material/Container';
 import ResponsiveAppBar from "../../components/molecules/ResponsiveAppBar copy"
-import CrearUsuario from '../../components/molecules/Usuarios/CrearUsuario/CrearUsuario';
-import ListarUsuario from '../../components/molecules/Usuarios/ListarUsuario/ListarUsuario';
+import CrearTecnologia from '../../components/molecules/tecnologias/CrearTecnologia/CrearTecnologia';
+import ListarTecnologia from '../../components/molecules/tecnologias/ListarTecnologia/ListarTecnologia';
 import { useState } from 'react';
-import EliminarUsuario from '../../components/molecules/Usuarios/EliminarUsuario/EliminarUsuario';
-import ActualizarUsuario from '../../components/molecules/Usuarios/ActualizarUsuario/ActualizarUsuario';
+import EliminarTecnologia from '../../components/molecules/tecnologias/EliminarTecnologia/EliminarTecnologia';
+import ActualizarTecnologia from '../../components/molecules/tecnologias/ActualizarTecnologia/ActualizarTecnologia';
 
 import { RootState } from 'src/lib/store';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 
-function CMS() {
+function CMStecnologia() {
 
   const navigate = useNavigate();
   const user: any = useSelector((state: RootState) => state.auth.user);
@@ -29,8 +29,6 @@ function CMS() {
   }
 
 
-
-
   const [load, setLoad] = useState(false);
   const [dataEliminar, setDataEliminar] = useState('')
   const [dataModificar, setDataModificar] = useState('')
@@ -38,13 +36,13 @@ function CMS() {
     <div>
     <ResponsiveAppBar />
     <Container maxWidth="lg" sx={{ mt: 5 }} >
-      <CrearUsuario setLoad={setLoad} load={load} />
-      <ListarUsuario load={load} setDataEliminar={setDataEliminar} setDataModificar={setDataModificar} />
-      <EliminarUsuario dataEliminar={dataEliminar}  load={load} setLoad={setLoad}  />
-      <ActualizarUsuario dataModificar={dataModificar} setLoad={setLoad} load={load} />
+      <CrearTecnologia setLoad={setLoad} load={load} />
+      <ListarTecnologia load={load} setDataEliminar={setDataEliminar} setDataModificar={setDataModificar} />
+      <EliminarTecnologia dataEliminar={dataEliminar}  load={load} setLoad={setLoad}  />
+      <ActualizarTecnologia dataModificar={dataModificar} setLoad={setLoad} load={load} />
     </Container>
     </div>
   );
 }
 
-export default CMS
+export default CMStecnologia

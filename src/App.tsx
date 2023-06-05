@@ -10,12 +10,33 @@ import CMSexperiencia from './assets/pages/CMSexperiencia';
 import Log from './assets/pages/log';
 import Login from './lib/slice/auth/login';
 
-
-
+import { useDispatch, useSelector } from 'react-redux';
+import { AppDispatch, RootState } from "./lib/store";
+import {useEffect} from 'react';
+import { fetchValidateToken } from "./lib/slice/authSlice";
 
 
 
 function App() {
+
+  const user: any = useSelector((state: RootState) => state.auth.user);
+  const dispatch = useDispatch<AppDispatch>();
+
+  useEffect(() => {
+  
+    const fetchData = async () => {
+
+      // const token = Cookies.get('token');
+      // if(token){
+      const response = await dispatch( fetchValidateToken() );
+      // }
+    };
+
+    fetchData();
+  }, [])
+
+
+
 
   return (
     <Router>
